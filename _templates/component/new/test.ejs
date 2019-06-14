@@ -1,0 +1,24 @@
+---
+to: src/components/<%= h.inflection.undasherize(name) %>/<%= h.inflection.undasherize(name) %>.test.tsx
+---
+<% const comp = h.inflection.undasherize(name) -%>
+/// <reference types="@types/jest" />
+import * as React from "react";
+
+import {
+    render,
+    cleanup
+} from 'react-testing-library';
+
+import { <%= comp %> } from "./index";
+
+afterEach(cleanup);
+
+describe("<%= comp %>", () => {
+    it("renders correctly", () => {
+        const { container } = render(<<%= comp %>  />)
+            
+        expect(container).toMatchSnapshot();
+    });
+});
+

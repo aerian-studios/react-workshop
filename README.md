@@ -1,2 +1,18 @@
 # react-workshop
-learn modern React from complete beginner
+
+Learn modern React from complete beginner to not such a complete beginner...
+
+## Get started
+
+1. Clone this repo
+2. Install with your package manager of choice:
+
+```bash
+yarn
+
+# or
+
+npm i
+```
+
+3. Run the project `yarn start` or `npm start`
