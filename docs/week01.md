@@ -6,7 +6,7 @@ React is a very intuitive way of making interactive interfaces. There are some
 simple rules (API) to learn and you can be writing React in next to no time. See
 for yourself:
 
-```javascript=
+```jsx
 // Header.jsx
 import React from "react";
 
@@ -21,7 +21,7 @@ export const Header = () => {
 
 that outputs this HTML:
 
-```htmlmixed=
+```html
 <header>
     <h1>
     Hello react
@@ -33,7 +33,7 @@ We call a React function a "component" if it outputs some markup like this (or
 if it outputs something that outputs markup). You use a component as if it is
 just a new HTML tag in your markup, like this:
 
-```javascript=
+```jsx
 // App.jsx
 import React from "react";
 import {Header} from "./Header.jsx";
@@ -49,7 +49,7 @@ export cont App = () => {
 
 as you may suspect, that outputs this in the browser:
 
-```htmlmixed=
+```html 
 <main>
     <header>
         <h1>
@@ -71,7 +71,7 @@ document.
 
 To do this, we use the ReactDOM library, whose role is interacting with the DOM.
 
-```javascript=
+```jsx
 //index.tsx
 import React from "react";
 import ReactDOM from "react-dom";
@@ -107,7 +107,7 @@ main value that React provides.
 Let's update our `Header` component; Let's say that we want to add a different
 emoji to the `h1`, but we don't know it ahead of time.
 
-```javascript=
+```jsx
 // Header.jsx
 import React from "react";
 
@@ -125,7 +125,7 @@ which is called `props` by convention. This is the first aspect of the React API
 to learn; the component function is always passed a `props` object as a
 parameter; in this case it would look something like this:
 
-```javascript=
+```javascript
 {
     ... // other properties
     emoji: ⚛️
@@ -139,7 +139,7 @@ Now we are going to learn how to populate the `props` parameter. In our code
 above we are expecting it to have an `emoji` property and we pass it to the
 Component like so:
 
-```javascript=
+```jsx
 // App.jsx
 import React from "react";
 import {Header} from "./Header.jsx";
@@ -164,7 +164,7 @@ I said almost anything and I mean it, you can pass functions, objects, even
 other Components. The limitation is what you name things because there are some
 property names that have a conventional meaning, let's have a look at some:
 
-```javascript=
+```jsx
 // App.jsx
 import React from "react";
 import {Header} from "./Header.jsx";
@@ -179,8 +179,9 @@ export cont App = () => {
         </main>
     );
 }
+```
 
-
+```jsx Header
 // Header.jsx
 import React from "react";
 
@@ -195,7 +196,7 @@ export const Header = (props) => {
 
 all of the above comes out like this:
 
-```htmlmixed=
+```html
 <main>
     <header class="a-css-class-name" style="color: red;">
         <h2 class="another-css-class-name">
@@ -227,7 +228,7 @@ Some really quite cool things here, and some not so cool...
 Make an accessible, componentised search form that we can use later to search
 the movie database. Here is some markup for you.
 
-```htmlmixed=
+```html
 <main>
     <header>
         <h1>
@@ -286,7 +287,7 @@ enshrines the use of an `<h1>` for the page title for SEO and accessibility and
 also these areas often have specific design requirements. Now we can use the
 same Component on every page and have built in SEO and accessibility!
 
-```javascript=
+```jsx
 // PageHeader.tsx
 
 import React from "react";
@@ -297,7 +298,9 @@ export const PageHeader = ({ pageTitle, children }) => (
         {children}
     </header>
 );
+```
 
+```jsx
 // App.tsx becomes
 import React from "react";
 import { PageHeader } from "../PageHeader";
@@ -351,7 +354,7 @@ Let's have a go at a first pass list of the things that we want to encapsulate:
 3. Allow arbitrary "extra" content, such as the submit button in this case, or a
    help tooltip, etc
 
-```javascript=
+```jsx
 // InputGroup.jsx
 
 import React from "react";
@@ -378,7 +381,7 @@ Very quickly we can see we need to add some criteria:
 6. We can set the input type
 7. We can set the input placeholder
 
-```javascript=
+```jsx
 // InputGroup.jsx
 
 import React from "react";
@@ -412,7 +415,7 @@ with that)?
 
 Now we have:
 
-```javascript=
+```jsx
 // App.tsx
 import React from "react";
 import { PageHeader } from "../PageHeader";
