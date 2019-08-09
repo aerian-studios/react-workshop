@@ -16,3 +16,7 @@ npm i
 ```
 
 3. Run the project `yarn start` or `npm start`
+
+# Tutorial
+
+-   [Week 1](./docs/week01.md)
