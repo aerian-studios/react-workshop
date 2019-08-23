@@ -1,36 +1,31 @@
 import React, { useState } from "react";
+import { Moon } from "./Moon";
 
-const isEven = (num) => num % 2 === 0;
+const phases = [
+    { emoji: "🌕", phase: "Full" },
+    { emoji: "🌖", phase: "Waning gibbous" },
+    { emoji: "🌗", phase: "First quarter" },
+    { emoji: "🌘", phase: "Waning crescent" },
+    { emoji: "🌑", phase: "New" },
+    { emoji: "🌒", phase: "Waxing crescent" },
+    { emoji: "🌓", phase: "Last quarter" },
+    { emoji: "🌔", phase: "Waxing gibbous" },
+];
 
-export const Incrementor = ({ emojis }) => {
-    // const clickHandler = () => {
-    //     console.log("Incremento!");
-    // };
+export const Incrementor = () => {
+    const [count, setCount] = useState(0);
 
-    const [value, setValue] = useState(0);
-
-    const [visible, setVisible] = useState(true);
-
-    const plusOne = () => {
-        setValue(value + 1);
+    const plusone = () => {
+        setCount((count + 1) % 8);
     };
 
-    const odd = <strong>Odd</strong>;
-    const even = <em>Even</em>;
-
     return (
-        <>
-            <div>
-                {visible && <p>{value}</p>}
-                <p>{isEven(value) ? even : odd}</p>
-                <button onClick={plusOne}>Plus one</button>
-                <button onClick={() => setVisible(!visible)}>Toggle</button>
-            </div>
-            <ul>
-                {emojis.map((emoji) => (
-                    <li key={emoji}>{emoji}</li>
-                ))}
-            </ul>
-        </>
+        <div>
+            <Moon
+                name={phases[count].phase}
+                emoji={phases[count].emoji}
+                onClick={plusone}
+            />
+        </div>
     );
 };
