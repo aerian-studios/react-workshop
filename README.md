@@ -20,3 +20,4 @@ npm i
 # Tutorial
 
 -   [Week 1](./docs/week01.md)
+-   [Week 2](./docs/week02.md)
