@@ -533,9 +533,10 @@ export const Lifecycle = () => {
 **useState** is to remember a value between renders
 
 **useEffect** is for doing something either long running tasks or anything
-outside of the direct render of your UI. We should always put our long running
-tasks and side effects in one of these. It will always run once, when the
-component first runs, but will only run again if a dependency changes
+outside of the direct render of your UI (like web APIs, e.g.
+`requestAnimationFrame`). We should always put our long running tasks and side
+effects in one of these. It will always run once, when the component first runs,
+but will only run again if a dependency changes
 
 **useCallback** is a way of keeping a reference to the callback passed in to the
 method so that it always has a reference to the exact same function. The reason
