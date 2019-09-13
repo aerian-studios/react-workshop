@@ -1,11 +1,9 @@
 import React from "react";
 
-import { Incrementor } from "./Incrementor";
-
-const emojis = ["🌕", "🌖", "🌗", "🌘", "🌑", "🌒", "🌓", "🌔"];
+import { Lifecycle } from "./Lifecycle";
 
 export const App = () => (
     <main>
-        <Incrementor emojis={emojis} />
+        <Lifecycle />
     </main>
 );
