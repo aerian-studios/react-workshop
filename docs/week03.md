@@ -444,14 +444,9 @@ export const Lifecycle = () => {
         setDogImage(breeds.message);
     };
 
-    useEffect(() => {
-        if (dogImage === undefined) {
-            getADogImage();
-        }
-    }, [dogImage]);
-
     const increment = useCallback(() => {
         setDogImage(undefined);
+        getADogImage();
     }, []);
 
     return (
@@ -462,10 +457,9 @@ export const Lifecycle = () => {
 };
 ```
 
-We have stuck to the principle of letting long running tasks happen in
-`useEffect` where it might have been tempting to `setDogImage` in increment, but
-that would mean that our render function was waiting an unknown amount of time
-for the image to load without outputting some UI!
+In this case we can allow the component to render with no image on a click and
+once the new image is retrieved, it will change state and re-render the
+component.
 
 ### Final task
 
