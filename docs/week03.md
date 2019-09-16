@@ -161,9 +161,9 @@ If I click the text twice I get the following:
    remember it.
 
 The final thing to address about the above code is why we used `useCallback` for
-our `increment` function. In fact, in this particular case, it is unnecessary,
-but if we are going to use the function anywhere else in our code (like passing
-it to another component or to a hook), there are 2 very good reasons to use it:
+our `increment` function. If we are going to use a function anywhere else in our
+code (like passing it to another component or to a hook), there are 2 very good
+reasons to use it:
 
 1. In JavaScript, `() =>{} !== () => {}`. Because any 2 functions are completely
    unique, if we didn't use `useCallback`, that would mean that every time our
