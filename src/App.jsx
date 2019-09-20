@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { DogImage } from "./DogPicture";
+import { DogPicker } from "./DogPicker";
 
-export const App = () => (
-    <main>
-        <DogImage breed="whippet" />
-        <DogImage breed="beagle" />
-        <DogImage />
-    </main>
-);
+export const App = () => {
+    const [breed, setBreed] = useState();
+    return (
+        <main>
+            <DogPicker onChange={setBreed} />
+            <DogImage breed={breed} />
+        </main>
+    );
+};

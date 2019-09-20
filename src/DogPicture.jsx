@@ -6,6 +6,6 @@ export const DogImage = ({ breed }) => {
     return dogImage ? (
         <img src={dogImage} alt={breed || "Dog"} />
     ) : (
-        "Waiting for doggo"
+        "Waiting for doggo..."
     );
 };

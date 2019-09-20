@@ -23,3 +23,21 @@ export const useDogImage = (breed) => {
 
     return dogImage;
 };
+
+export const fetchAllTheDogs = async () => {
+    const response = await fetch("https://dog.ceo/api/breeds/list/all");
+    return response.json();
+};
+
+export const useDogBreeds = () => {
+    const [dogBreeds, setDogBreeds] = useState([]);
+
+    useEffect(() => {
+        const getAllTheDogs = async () => {
+            const breeds = await fetchAllTheDogs();
+            setDogBreeds(Object.keys(breeds.message));
+        };
+        getAllTheDogs();
+    }, []);
+    return dogBreeds;
+};
