@@ -21,9 +21,10 @@ npm i
 
 ## Start here:
 
--   [Week 1](./docs/week01.md)
--   [Week 2](./docs/week02.md)
+-   [Session 1](./docs/week01.md)
+-   [Session 2](./docs/week02.md)
 
 ## Intermediate:
 
--   [Week 1](./docs/week03.md)
+-   [Session 1](./docs/week03.md)
+-   [Session 2](./docs/week04.md)
