@@ -1,8 +1,10 @@
 import React from "react";
-import { Lifecycle } from "./Lifecycle";
+import { DogImage } from "./DogPicture";
 
 export const App = () => (
     <main>
-        <Lifecycle />
+        <DogImage breed="whippet" />
+        <DogImage breed="beagle" />
+        <DogImage />
     </main>
 );
