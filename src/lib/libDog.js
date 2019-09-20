@@ -41,3 +41,16 @@ export const useDogBreeds = () => {
     }, []);
     return dogBreeds;
 };
+
+export const useDogSubBreeds = () => {
+    const [dogBreeds, setDogBreeds] = useState({});
+
+    useEffect(() => {
+        const getAllTheDogs = async () => {
+            const breeds = await fetchAllTheDogs();
+            setDogBreeds(breeds.message);
+        };
+        getAllTheDogs();
+    }, []);
+    return dogBreeds;
+};
