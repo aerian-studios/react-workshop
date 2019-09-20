@@ -80,7 +80,7 @@ means it is re-run whenever `breed` changes.
 
 This is now usable, so we can create a new component that uses it.
 
-```jsx=
+```jsx
 import React from "react";
 import { useDogImage } from "./lib/dogCeo";
 
