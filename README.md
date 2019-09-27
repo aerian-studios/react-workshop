@@ -26,4 +26,7 @@ npm i
 
 ## Intermediate:
 
+### React hooks intro
+
 -   [Week 1](./docs/week03.md)
+-   [Week 2](./docs/week04.md)
