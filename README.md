@@ -30,3 +30,7 @@ npm i
 
 -   [Week 1](./docs/week03.md)
 -   [Week 2](./docs/week04.md)
+
+## Testing
+
+-   [Unit tests](./docs/testing-unit.md)

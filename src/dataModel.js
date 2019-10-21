@@ -4,6 +4,15 @@
  * @returns {object} - sorted, deduped ownerhip relationship
  */
 export const tidyDataById = (data) => {
+    // check that it exists, that it is an object and not an array
+    if (
+        !data ||
+        (data !== Object(data) || typeof data.length !== "undefined")
+    ) {
+        throw new Error(
+            "Error: tidyDataById must be called with a valid object"
+        );
+    }
     const sortedOwnerIds = Object.keys(data).sort();
     const sortedOwners = {};
 
@@ -27,6 +36,9 @@ export const tidyDataById = (data) => {
  */
 export const extractDataByOwner = (data) => {
     const owners = {};
+    if (!data || !data.owners || !data.elements) {
+        return owners;
+    }
 
     data.elements.forEach((element) => {
         element.put.forEach((owner) => {

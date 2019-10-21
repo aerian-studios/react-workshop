@@ -28,3 +28,10 @@ export const mockAPIResponse = {
         },
     ],
 };
+
+export const mockExtractedData = {
+    "persona-non-grata": [],
+    bob: ["first_element", "third_element"],
+    kevin: ["fourth_element", "fourth_element"],
+    fred: ["feedback", "fifth_element"],
+};
