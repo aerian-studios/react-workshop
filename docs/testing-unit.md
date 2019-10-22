@@ -15,9 +15,10 @@ Kent C Dodds...
 > may not take longer to implement what I'm building, but I (and others) will
 > almost definitely save time maintaining it.
 
-That is the most likely reason that you would want to test, but there are other,
-more subtle reasons to write tests that we will go into, but first let's talk
-about what is a test and types of test.
+That is the most likely reason that you would want to test, the point is that
+the payoff is not immediate and so hard to buy into. There are other, more
+subtle reasons to write tests that we will go into, but first let's talk about
+what is a test and types of test.
 
 ### What makes a test?
 
