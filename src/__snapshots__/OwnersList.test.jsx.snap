@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OwnersList renders a table correctly 1`] = `
+<div>
+  <p>
+    Loading...
+  </p>
+</div>
+`;
+
+exports[`OwnersList renders a table correctly 2`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Owner
+        </th>
+        <th>
+          Elements
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          bob
+          :
+        </td>
+        <td>
+          <span>
+            first_element
+          </span>
+          <span>
+            third_element
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          fred
+          :
+        </td>
+        <td>
+          <span>
+            feedback
+          </span>
+          <span>
+            fifth_element
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          kevin
+          :
+        </td>
+        <td>
+          <span>
+            fourth_element
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`OwnersList reverses the order of the table when clicking on table headers 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Owner
+        </th>
+        <th>
+          Elements
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          bob
+          :
+        </td>
+        <td>
+          <span>
+            first_element
+          </span>
+          <span>
+            third_element
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          fred
+          :
+        </td>
+        <td>
+          <span>
+            feedback
+          </span>
+          <span>
+            fifth_element
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td
+          data-testid="owner"
+        >
+          kevin
+          :
+        </td>
+        <td>
+          <span>
+            fourth_element
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

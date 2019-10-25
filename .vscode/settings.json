@@ -11,5 +11,6 @@
     "eslint.provideLintTask": true,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "window.zoomLevel": 2
 }

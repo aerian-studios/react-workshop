@@ -1,5 +1,6 @@
-import { extractDataByOwner, tidyDataById } from "./dataModel";
-import { mockAPIResponse, mockExtractedData } from "./lib/fixtures";
+import fetch from "../__mocks__/fetch";
+import { mockAPIResponse, mockProducers } from "./lib/fixtures";
+import { extractDataByOwner, tidyDataById, getData } from "./dataModel";
 
 describe("dataModel", () => {
     // the describe block should tell us the context
@@ -43,7 +44,7 @@ describe("dataModel", () => {
         // setup test:: In order to test this we can make a fixture from the output of `extractDataByOwner` but before tidy is called
 
         // act
-        const tidy = tidyDataById(mockExtractedData);
+        const tidy = tidyDataById(mockProducers);
         // setup test
         const ids = Object.keys(tidy);
 
@@ -87,5 +88,35 @@ describe("dataModel", () => {
         expect(() => {
             tidyDataById("hellow");
         }).toThrow("Error: tidyDataById must be called with a valid object");
+    });
+
+    test("tidyDataById sorts parsed data", () => {
+        const tidyData = tidyDataById(mockProducers);
+        const keys = Object.keys(tidyData);
+
+        expect(tidyData.bob).toEqual(tidyData[keys[0]]);
+        expect(tidyData.fred).toEqual(tidyData[keys[1]]);
+        expect(tidyData.kevin).toEqual(tidyData[keys[2]]);
+    });
+
+    test("tidyDataById removes empty producers", () => {
+        const tidyData = tidyDataById(mockProducers);
+        expect(tidyData["persona-non-grata"]).toBeUndefined();
+    });
+    test("tidyDataById removes duplicate credits", () => {
+        const tidyData = tidyDataById(mockProducers);
+        expect(tidyData.kevin.length).toBe(1);
+    });
+
+    test("tidyDataById throws when passed invalid data", () => {
+        expect(() => tidyDataById()).toThrow();
+    });
+
+    test("getData tries to fetch data and returns expected structure", async () => {
+        const data = await getData();
+        expect(data.owners).toBeDefined();
+        expect(data.elements).toBeDefined();
+        expect(data.elements.length).toBe(5);
+        expect(data.owners.length).toBe(4);
     });
 });

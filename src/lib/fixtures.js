@@ -29,7 +29,7 @@ export const mockAPIResponse = {
     ],
 };
 
-export const mockExtractedData = {
+export const mockProducers = {
     "persona-non-grata": [],
     bob: ["first_element", "third_element"],
     kevin: ["fourth_element", "fourth_element"],

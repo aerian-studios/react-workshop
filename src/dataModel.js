@@ -58,3 +58,33 @@ export const extractDataByOwner = (data) => {
 
     return tidyDataById(owners);
 };
+
+export const API_URL = "/api/latest/getdata";
+
+export const fetchData = async () => {
+    try {
+        const response = await fetch(`${API_URL}`);
+        return response.json();
+    } catch (err) {
+        throw new Error("Couldn't fetch the data", err);
+    }
+};
+
+export const emptyElementAPI = {
+    owners: [],
+    elements: [],
+};
+
+export const getData = async () => {
+    try {
+        const dataResp = await fetchData();
+
+        if (dataResp && dataResp.constructor === Object) {
+            return dataResp;
+        }
+        return emptyElementAPI;
+    } catch (error) {
+        console.warn("There was an error fetching the data.", error);
+        return error;
+    }
+};
