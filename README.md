@@ -34,3 +34,4 @@ npm i
 ## Testing
 
 -   [Unit tests](./docs/testing-unit.md)
+-   [Integration tests](./docs/testing-integration.md)
