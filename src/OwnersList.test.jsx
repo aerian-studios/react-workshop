@@ -30,10 +30,10 @@ describe("OwnersList", () => {
         expect(owners[2].textContent).toBe("kevin:");
 
         fireEvent.click(getByText(container, "Owner"));
-        // expect(container).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
         owners = getAllByTestId(container, "owner");
-        // expect(owners[0].textContent).toBe("kevin:");
-        // expect(owners[1].textContent).toBe("fred:");
-        // expect(owners[2].textContent).toBe("bob:");
+        expect(owners[0].textContent).toBe("kevin:");
+        expect(owners[1].textContent).toBe("fred:");
+        expect(owners[2].textContent).toBe("bob:");
     });
 });
