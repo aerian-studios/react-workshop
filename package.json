@@ -8,6 +8,10 @@
         "build-project": "parcel build final-project/index.html",
         "delete": "git reset --hard && git clean -dfe coverage dist && npm install",
         "precommit": "lint-staged",
+        "smashtest": "smashtest smashtest/*.smash",
+        "smashtest-headed": "smashtest smashtest/*.smash --headless=false",
+        "smashtest-screenshots": "smashtest smashtest/*.smash --screenshots=true",
+        "smashtest-screenshots-headed": "smashtest smashtest/*.smash --screenshots=true --headless=false",
         "start": "parcel index.html",
         "test": "jest --watchAll"
     },
@@ -70,6 +74,7 @@
         "node-sass": "^4.9.2",
         "parcel-bundler": "^1.12.3",
         "prettier": "^1.18.2",
-        "prettier-plugin-packagejson": "^2.0.1"
+        "prettier-plugin-packagejson": "^2.0.1",
+        "smashtest": "^1.6.9"
     }
 }

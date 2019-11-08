@@ -1,0 +1,70 @@
+// 1. User visits aerian homepage
+// 2. User clicks on "Our work"
+// 3. User scrolls to explore work
+// 4. User hovers over project card
+// 5. User clicks on project card
+// 6. User watches video of project for 10 secs
+// 7. User scrolls to "launch project" button
+// 8. User hovers over "launch project" button
+// 9. User clicks on "launch project" button
+// back button
+// 10a. Clicks on "see more work"
+// 10b. Clicks on "contact us"
+
+
+Open Firefox #Firefox
+Open Chrome
+$ Open Safari
+
+    Desktop
+
+        Navigate to "https://beta.aerian.com/"
+            Given any user is at the Aerian site rebuild 
+                On Our Work page
+                    - Click on Bananaman link
+                        On project page
+                            Wait until at page "beano.com"
+                                Go back 
+                                    Scroll to "footer"
+                                        Hover over then click on [a, "Contact us"]
+                                            // Wait '5' secs
+
+
+            * Given any user is at the Aerian site rebuild {
+                props({
+                    "Our Work link": `a, "Our Work"`
+                });
+            }
+                Hover over then click on "Our Work link"
+            
+
+* On Our Work page {
+    props({
+        "Bananaman link": `a[href="/our-work/project/bananaman-chase-in-space"]`
+    });
+}    
+    Wait until "h1" is visible
+        Scroll to "footer"
+            Verify [p, "Call 0345 408 6009"] is visible
+                Scroll to [h1, "Our Work"]
+                    Hover over then click on "Bananaman link"
+
+* On project page 
+    Scroll to [span, "Case study"]
+        Hover over then click on [a, "Launch project"]
+
+
+* Hover over then click on {{element}} +
+    Hover over {{element}}
+        Click {{element}}
+
+
+
+
+
+
+
+
+
+
+

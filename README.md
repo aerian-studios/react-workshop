@@ -35,3 +35,4 @@ npm i
 
 -   [Unit tests](./docs/testing-unit.md)
 -   [Integration tests](./docs/testing-integration.md)
+-   [End to end tests](./docs/testing-e2e.md)

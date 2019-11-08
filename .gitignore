@@ -63,3 +63,8 @@ typings/
 .cache
 .sonarlint
 dist
+
+# smashtest output
+smashtest/passed-data
+smashtest/report-data.js
+smashtest/report.html
