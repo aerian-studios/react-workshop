@@ -1,0 +1,39 @@
+:root {
+    --font-base: sans-serif;
+    --font-emphasis: serif;
+
+    // Text sizes (shirt sizes)
+    --t-base: 16;
+    --t-xs: calc(12rem / var(--t-base)); // 12px
+    --t-sm: calc(14rem / var(--t-base));
+    --t-m: 1rem;
+    --t-ml: calc(18rem / var(--t-base));
+    --t-l: calc(18rem / var(--t-base));
+    --t-xl: calc(36rem / var(--t-base));
+
+    --tw-bold: 600;
+    --tw-medium: 500;
+    --tw-normal: 400;
+    --tw-light: 300;
+    --tw-lighter: 200;
+
+    /** Alias **/
+    --t-body-xs: var(--t-xs);
+    --t-body-sm: var(--t-sm);
+    --t-body-m: var(--t-m);
+    --t-body-l: var(--t-ml);
+    --t-heading-sm: var(--t-ml);
+    --t-heading-m: var(--t-l);
+    --t-heading-l: var(--t-xl);
+
+    // Line Height
+    --lh-body-xs: 22px;
+    --lh-body-sm: 26px;
+    --lh-body-m: 26px;
+    --lh-body-l: 30px;
+    --lh-heading-xs: 30px;
+    --lh-heading-sm: 34px;
+    --lh-heading-m: 36px;
+    --lh-heading-l: 42px;
+    --lh-heading-xl: 54px;
+}

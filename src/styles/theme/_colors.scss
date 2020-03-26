@@ -1,0 +1,36 @@
+:root {
+    /***** Primary Palette *****/
+    --c-blue: #2b70b9;
+    --c-dark-blue: #051c48;
+    --c-light-blue: #4c8ccf;
+    --c-black: #000000;
+    --c-white: #ffffff;
+    --c-sunflower: #ffbd4a;
+    --c-red: #c00018;
+    /***** Grayscale Palette *****/
+    --c-gray-100: #f5f5f5;
+    --c-gray-200: #eaeaea;
+    --c-gray-300: #c8c8c8;
+    --c-gray-400: #afafaf;
+    --c-gray-500: #8e8e8e;
+    --c-gray-600: #6f6f6f;
+    --c-gray-700: #333333;
+    --c-gray-800: #2b2b2b;
+    /***** Semantics vars *****/
+    --c-focus-ring: var(--c-orange);
+    // Body
+    --c-body-bg: var(--c-white);
+    --c-body: var(--c-black);
+    // Button
+    --c-button: var(--c-white);
+    --c-button-bg: var(--c-blue);
+    --c-button-border: var(--c-blue);
+    --c-button-active: var(--c-blue);
+    --c-button-active-bg: var(--c-white);
+    --c-button-active-border: var(--c-dark-blue);
+
+    // Link
+    --c-link: var(--c-blue);
+    --c-link-hover: var(--c-dark-blue);
+    --c-emphasized-link-hover-darken-percentage: 15%;
+}

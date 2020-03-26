@@ -1,0 +1,32 @@
+$view-breakpoint-1: 1280px;
+$view-breakpoint-2: 992px;
+$view-breakpoint-3: 768px;
+$view-breakpoint-4: 650px;
+$view-breakpoint-5: 375px;
+
+$content-max-width: 1282px;
+$content-min-width: $view-breakpoint-5;
+$content-padding: 15px;
+
+$mobile-breakpoint: $view-breakpoint-5;
+$mobile-width: 640px;
+
+:root {
+    // spacing
+    --s-1: 8px;
+    --s-2: calc(2 * var(--s-1));
+    --s-3: calc(3 * var(--s-1));
+    --s-4: calc(4 * var(--s-1));
+    --s-5: calc(5 * var(--s-1));
+    --s-6: calc(6 * var(--s-1));
+    --s-8: calc(8 * var(--s-1));
+    --s-10: calc(10 * var(--s-1));
+    --s-min-gutter: 32px; // this is arbitrary atm
+    --s-grid-gap: 24px;
+    --s-row-gap: 40px;
+    --s-border-radius-s: var(--s-1);
+    --s-border-radius-m: calc(var(--s-1) * 1.5);
+    --s-icon: 24px;
+
+    --s-max-content-width: #{$content-max-width};
+}

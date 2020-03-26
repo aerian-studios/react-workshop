@@ -1,0 +1,30 @@
+* Given any User is at the Aerian rebuild site
+    Open browser
+        Navigate to aerian site rebuild
+
+    * Open browser
+
+        Open Chrome
+        Open Firefox
+
+            Desktop
+            Mobile
+
+    * Navigate to aerian site rebuild
+        Navigate to 'https://beta.aerian.com'
+            On Aerian homepage
+
+        * On Aerian homepage {
+            props({
+                'carousel item': `a[href="/our-work/project/bananaman-chase-in-space"]`,
+            });
+        }
+            // verify that the element is on the page
+            Verify 'carousel item' is visible
+
+            * User explores carousel item
+                Hover over 'carousel item'
+                click 'carousel item'
+
+Given any User is at the Aerian rebuild site
+    User explores carousel item
