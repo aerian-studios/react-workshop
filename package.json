@@ -74,6 +74,8 @@
         "lint-staged": "^7.2.0",
         "node-sass": "^4.9.2",
         "parcel-bundler": "^1.12.3",
+        "postcss": "^7.0.27",
+        "postcss-modules": "^1.5.0",
         "prettier": "^1.18.2",
         "prettier-plugin-packagejson": "^2.0.1",
         "smashtest": "^1.6.9"
