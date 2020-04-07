@@ -1,9 +1,8 @@
 import React from "react";
-import { Lifecycle } from "./Lifecycle";
-import { OwnersList } from "./OwnersList";
+import NewsList from "./components/edges/NewsList";
 
 export const App = () => (
     <main>
-        <OwnersList />
+        <NewsList />
     </main>
 );

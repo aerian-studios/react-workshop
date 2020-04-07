@@ -1,0 +1,62 @@
+.component {
+    /* This is actually an object famously described by OOCSS, so this component can map to that perfectly */
+    position: relative;
+    padding: calc(var(--s-1) * 1.5) 0;
+}
+
+.link {
+    display: flex;
+    flex-flow: var(--card-flow);
+    justify-content: var(--card-justify);
+    align-items: var(--card-align);
+    color: var(--card-color);
+    text-decoration: none;
+}
+
+.imageWrap {
+    width: var(--media-width);
+    height: var(--media-height);
+    margin: var(--media-spacing);
+}
+
+.contentWrap {
+    flex: 1;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.metaText {
+    font-family: var(--font-family-1);
+    font-size: var(--t-body-xs);
+    height: min-content;
+}
+
+.taxonomy {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--tw-bold);
+    composes: metaText;
+}
+
+.heading *:not(.taxonomy) {
+    font-size: var(--t-body-ml);
+    font-family: var(--font-family-2);
+    font-weight: var(--tw-m);
+    line-height: 1.3em;
+    margin-bottom: 0;
+}
+
+.info {
+    align-self: end;
+    composes: metaText;
+    margin-bottom: 0;
+}

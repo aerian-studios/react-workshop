@@ -1,0 +1,29 @@
+.edge {
+    composes: noList from "../../../styles/utilities.module.css";
+    /* you could use grid here or make a theme variable for card spacing */
+}
+.card {
+    border-bottom: 1px solid var(--c-gray-300);
+    /* variables are scoped to the edge component, mobile first so we can add the layout context spacing for our cards */
+    --media-spacing: 0 0 8px;
+    --media-width: 100%;
+    --media-height: auto;
+    --card-flow: row wrap;
+    --card-justify: flex-start;
+    --card-align: flex-start;
+}
+
+.warning {
+    color: var(--c-red);
+    margin-right: 1em;
+}
+
+@media (min-width: 375px) {
+    .card {
+        --media-spacing: 0 16px 0 0;
+        --media-width: 10.625rem;
+        --card-flow: row nowrap;
+        --card-justify: flex-start;
+        --card-align: flex-start;
+    }
+}

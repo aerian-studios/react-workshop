@@ -29,4 +29,6 @@ $mobile-width: 640px;
     --s-icon: 24px;
 
     --s-max-content-width: #{$content-max-width};
+
+    --bp-m: #{$view-breakpoint-5};
 }
