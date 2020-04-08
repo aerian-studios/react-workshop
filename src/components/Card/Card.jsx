@@ -29,8 +29,6 @@ export const Card = ({ className, uri, children, ...rest }) => {
         const otherContent = [];
 
         React.Children.map(children, (child) => {
-            console.log(child.type.name, { children });
-
             if (
                 child.type.name === "CardTaxonomy" ||
                 child.type.name === "CardTitle"
@@ -40,14 +38,6 @@ export const Card = ({ className, uri, children, ...rest }) => {
             if (child.type.name === "CardMeta") {
                 return textContent.push(child);
             }
-
-            // if (child.type.name === "NewsMetaData") {
-            //     return otherContent.push(
-            //         React.cloneElement(child, {
-            //             className: styles.metaText,
-            //         })
-            //     );
-            // }
 
             return otherContent.push(child);
         });
