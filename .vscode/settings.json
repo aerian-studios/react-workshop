@@ -14,5 +14,7 @@
     "window.zoomLevel": 0,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+    "spellright.language": ["en"],
+    "spellright.documentTypes": ["markdown", "latex", "plaintext"]
 }
