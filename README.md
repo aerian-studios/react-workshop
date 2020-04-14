@@ -36,3 +36,8 @@ npm i
 -   [Unit tests](./docs/testing-unit.md)
 -   [Integration tests](./docs/testing-integration.md)
 -   [End to end tests](./docs/testing-e2e.md)
+
+## CSS-in-JS and re-usable components
+
+-   [A strategy for CSS in JS](./docs/css-in-js-week01.md)
+-   [Re-usable components with CSS in JS](./docs/css-in-js-week2_Reusable-components.md)
