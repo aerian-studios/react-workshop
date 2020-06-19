@@ -18,6 +18,7 @@ export const CardMeta = ({ className, children, ...rest }) => (
     <div className={cx(className, styles.info)}>{children}</div>
 );
 
+// This should not be exported for use outside
 const TextContent = ({ children }) => (
     <div className={styles.contentWrap}>{children}</div>
 );
